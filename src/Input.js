@@ -12,14 +12,14 @@ function Input() {
         setInputs({
             ...inputs,
             [name] : value // dynamic property assign
-        })
-    }
+        });
+    };
 
     return (<>
         <div>
             <h2>성적 : {inputs.subject}{inputs.score} </h2>
-            <input name="subject" placeholder="수학" value={inputs.subject} />
-            <input name="score" placeholder="99" value={inputs.score} />
+            <input name="subject" placeholder="수학" value={inputs.subject} onChange={onChange}/>
+            <input name="score" placeholder="99" value={inputs.score} onChange={onChange}/>
         </div>
     </>);
 }
