@@ -1,5 +1,7 @@
 # 2023년11월_빡공단 40기_리액트클래스
-노션정리 : https://www.notion.so/40-_-19d98789f940496fb76dc1f572f40aaa?pvs=4
+
+노션정리
+https://daffy-sodalite-c07.notion.site/40-_-19d98789f940496fb76dc1f572f40aaa?pvs=4
 
 [1강. 리액트는 대체 왜 탄생했을까요?]
 
