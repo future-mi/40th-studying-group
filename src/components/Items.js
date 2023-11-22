@@ -1,16 +1,30 @@
+import { useState, useEffect } from "react";
 import Item from "./Item";
 
-export default function Items(){
-    var item={status:"done", task:"커피마시기", due:"20231120"}
+export default function Items() {
+  const [data, setData] = useState([]); //
 
-    return ( <table>
-        <td></td>
-        <td>Task</td>
-        <td>Due</td>
-        <td></td>
-        <Item item={item}/>
-        <Item item={item}/>
-        <Item item={item}/>
+  useEffect(() => {
+    fetch("http://localhost:3001/items")
+      .then((res) => {
+        return res.json();
+      })
+      .then((json_response) => {
+        setData(json_response);
+      });
+  });
+
+  return (
+    <table>
+      <td></td>
+      <td>Task</td>
+      <td>Due</td>
+      <td></td>
+      {data.map(
+        (item) => {
+            return <Item key={item.id} item={item}/>
+        }
+      )}
     </table>
-    );
+  );
 }
