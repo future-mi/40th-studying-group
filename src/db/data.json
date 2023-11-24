@@ -4,13 +4,7 @@
       "id": 1,
       "task": "자기",
       "due": "20230901",
-      "status": "done"
-    },
-    {
-      "id": 2,
-      "task": "청소하기",
-      "due": "20230902",
-      "status": "done"
+      "status": "todo"
     },
     {
       "id": 3,
