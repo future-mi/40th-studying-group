@@ -19,11 +19,11 @@ export default function CreateItem(){
 
     useEffect(()=>{
         ref.current.focus();   // 이곳으로 포커스가맞춰짐
-    })
+    }, []);
 
     const onSubmit = (event) => {
         event.preventDefault(); // 화면이 새로고침 되는걸 막아줌
-        fetch("http://localhost:3001/items",{
+        fetch(`${process.env.REACT_APP_BACKEND_API_URI}/items`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
